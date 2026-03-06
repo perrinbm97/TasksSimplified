@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/30b6aca2c6.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="./Assets/BP Logo.jpg" alt="" />
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search for task here..."
+        />
+        <button class="search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </div>
+      <div class="date-display">
+        <div class="day" id="currentDay">Tuesday</div>
+        <div class="full-date" id="currentDate">03/06/2026</div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="sidebar">
+        <div class="profile">
+          <div class="profile-img">
+            <img src="./Assets/profile.jpg" alt="profile" />
+          </div>
+          <div class="profile-name">Bella Whiskers</div>
+          <div class="profile-email">bella@meow.com</div>
+        </div>
+        <button class="sidebar-button">
+          <i class="fa-solid fa-list"></i>
+          My Tasks
+        </button>
+      </div>
+      <div class="main-content">
+        <div class="tasks-column">
+          <div class="column-header-container">
+            <h2 class="column-header">My Tasks</h2>
+            <button class="add-task-circle-btn">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+          <div class="tasks-wrapper">
+            <!-- Javascript -->
+          </div>
+        </div>
+        <div class="task-details">
+          <!-- Javascript -->
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="taskModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="modalTitle">Add New Task</h2>
+          <a href="#" class="go-back" id="closeModalBtn">Go Back</a>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="taskTitle">Title:</label>
+            <input type="text" id="taskTitle" class="form-input" />
+          </div>
+          <div class="form-group">
+            <label for="taskDate">Date:</label>
+            <div class="date-input-container">
+              <input type="text" id="taskDate" class="form-input" />
+              <span class="calendar-icon">
+                <i class="fa-regular fa-calendar"></i>
+              </span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Priority:</label>
+            <div class="priority-options">
+                <div class="priority-option">
+                    <span class="priority-dot extreme"></span>
+                    <span>Extreme</span>
+                    <input type="radio" name="priority" value="extreme">
+                </div>
+                <div class="priority-option">
+                    <span class="priority-dot moderate"></span>
+                    <span>Moderate</span>
+                    <input type="radio" name="priority" value="moderate">
+                </div>
+                <div class="priority-option">
+                    <span class="priority-dot low"></span>
+                    <span>Low</span>
+                    <input type="radio" name="priority" value="low" checked>
+                </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="taskDescription">Task Description:</label>
+            <textarea id="taskDescription" class="textarea-input" placeholder="Start writing here..."></textarea>
+          </div>
+          <button class="done-btn" id="saveTaskBtn">Done</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
