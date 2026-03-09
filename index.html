@@ -9,11 +9,13 @@
       src="https://kit.fontawesome.com/30b6aca2c6.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="./Assets/BP Logo.jpg" alt="" />
+        <img src="./Assets/BMP_logo.svg" class="personal-logo" alt="" />
+        <div class="logo-text">TasksSimplified</div>
       </div>
       <div class="search-container">
         <input
@@ -26,8 +28,8 @@
         </button>
       </div>
       <div class="date-display">
-        <div class="day" id="currentDay">Tuesday</div>
-        <div class="full-date" id="currentDate">03/06/2026</div>
+        <div class="day" id="currentDay"></div>
+        <div class="full-date" id="currentDate"></div>
       </div>
     </header>
     <div class="container">
@@ -48,7 +50,7 @@
         <div class="tasks-column">
           <div class="column-header-container">
             <h2 class="column-header">My Tasks</h2>
-            <button class="add-task-circle-btn">
+            <button id="addTaskBtn" class="add-task-circle-btn">
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
@@ -84,32 +86,34 @@
           <div class="form-group">
             <label>Priority:</label>
             <div class="priority-options">
-                <div class="priority-option">
-                    <span class="priority-dot extreme"></span>
-                    <span>Extreme</span>
-                    <input type="radio" name="priority" value="extreme">
-                </div>
-                <div class="priority-option">
-                    <span class="priority-dot moderate"></span>
-                    <span>Moderate</span>
-                    <input type="radio" name="priority" value="moderate">
-                </div>
-                <div class="priority-option">
-                    <span class="priority-dot low"></span>
-                    <span>Low</span>
-                    <input type="radio" name="priority" value="low" checked>
-                </div>
+              <div class="priority-option">
+                <span class="priority-dot extreme"></span>
+                <span>Extreme</span>
+                <input type="radio" name="priority" value="extreme" />
+              </div>
+              <div class="priority-option">
+                <span class="priority-dot moderate"></span>
+                <span>Moderate</span>
+                <input type="radio" name="priority" value="moderate" />
+              </div>
+              <div class="priority-option">
+                <span class="priority-dot low"></span>
+                <span>Low</span>
+                <input type="radio" name="priority" value="low" checked />
+              </div>
             </div>
           </div>
           <div class="form-group">
             <label for="taskDescription">Task Description:</label>
-            <textarea id="taskDescription" class="textarea-input" placeholder="Start writing here..."></textarea>
+            <textarea
+              id="taskDescription"
+              class="textarea-input"
+              placeholder="Start writing here..."
+            ></textarea>
           </div>
           <button class="done-btn" id="saveTaskBtn">Done</button>
         </div>
       </div>
     </div>
-
-    <script src="./script.js"></script>
   </body>
 </html>
